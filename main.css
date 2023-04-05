@@ -1,6 +1,88 @@
+                                            /*======= RESETS ==========*/
+
 *{
     box-sizing: border-box;
     font:inherit;
     margin: 0;
     padding: 0;
+}
+
+a{text-decoration: none}
+
+ul{list-style: none;}
+
+:root{
+
+    /* === > colors  <=== */
+
+    --primary-clr-500:hsl(220, 4%, 86%);
+    --primary-clr-600:hsl(0, 0%, 25%); 
+    --primary-clr-700:hsl(0, 0%, 0%); 
+
+    /* === > Fonts  <=== */
+    
+    --fw-regular:400;
+    --fw-semi-bold:500;
+    --fw-bold:700;
+
+    /* === > paddings  <=== */
+
+    --header-padding:3.4rem;
+
+    /* === > Layout  <=== */
+
+    --header-height:9.2rem;
+
+}
+
+                             /*======= UTILITY CLASSES ==========*/
+
+.primary-clr-500{color: var(--primary-clr-500);}
+.primary-clr-600{color: var(--primary-clr-600);}
+.primary-clr-700{color: var(--primary-clr-700);}
+
+.fw-regular{font-weight: ;}
+.fw-semi-bold{font-weight: ;}
+.fw-bold{font-weight: ;}
+
+                                  /*======= BASE ==========*/  
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    overflow: auto hidden;
+    font-family: ;
+    color: var(--primary-clr-700);
+}
+
+
+.container{
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    border-bottom: 1px solid var(--primary-clr-500);
+    padding-block:var(--header-padding);
+    height: var(--header-height);
+    width: 100vw;
+    text-align: center;
+}
+
+
+.logo  img{
+    height: 4rem;
+    width: auto;
+    margin-right: 0.8rem;
+}
+
+.logo a{
+    display: inline-flex;
+    align-items: center;
+    font-size: 2.6rem;
 }
