@@ -7,7 +7,11 @@
     padding: 0;
 }
 
-a{text-decoration: none}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+}
 
 ul{list-style: none;}
 
@@ -15,7 +19,10 @@ ul{list-style: none;}
 
     /* === > colors  <=== */
 
-    --primary-clr-500:hsl(220, 4%, 86%);
+    
+    --primary-clr-100:hsl(0, 0%, 100%);
+    --primary-clr-400:hsl(220, 4%, 86%);
+    --primary-clr-500:hsl(0, 0%, 48%);
     --primary-clr-600:hsl(0, 0%, 25%); 
     --primary-clr-700:hsl(0, 0%, 0%); 
 
@@ -37,13 +44,15 @@ ul{list-style: none;}
 
                              /*======= UTILITY CLASSES ==========*/
 
+.primary-clr-100{color: var(--primary-clr-100);}
+.primary-clr-400{color: var(--primary-clr-400);}
 .primary-clr-500{color: var(--primary-clr-500);}
 .primary-clr-600{color: var(--primary-clr-600);}
 .primary-clr-700{color: var(--primary-clr-700);}
 
-.fw-regular{font-weight: ;}
-.fw-semi-bold{font-weight: ;}
-.fw-bold{font-weight: ;}
+.fw-regular{font-weight: var(--fw-regular);}
+.fw-semi-bold{font-weight: var(--fw-semi-bold);}
+.fw-bold{font-weight: var(--fw-bold);}
 
                                   /*======= BASE ==========*/  
 
@@ -61,13 +70,13 @@ body{
 
 .container{
     display: grid;
-    justify-content: center;
-    height: 100vh;
+    justify-items:center;
+    /* height: 100vh; */
     width: 100vw;
 }
 
 .header{
-    border-bottom: 1px solid var(--primary-clr-500);
+    border-bottom: 1px solid var(--primary-clr-400);
     padding-block:var(--header-padding);
     height: var(--header-height);
     width: 100vw;
@@ -86,3 +95,32 @@ body{
     align-items: center;
     font-size: 2.6rem;
 }
+
+main{
+    margin-top: 4rem;
+}
+
+.btn{
+    align-items: center;
+    border: 1px solid var(--primary-clr-500);
+    border-radius: 5rem;
+    color: var(--primary-clr-100);
+    display: grid;
+    height: 5rem;
+    margin-top: 1.6rem;
+    text-align: center;
+    width: 43.1rem;
+}
+
+.btn[data-inverted = "blue"]{
+    background: hsl(214, 89%, 52%);
+    border-color: hsl(214, 89%, 52%);
+}
+
+.btn[data-inverted = "black"]{background: hsl(0, 0%, 10%);}
+
+.btn[data-inverted = "grey"]{
+    color: var(--primary-clr-500);
+}
+
+ /* in mobile screen sizes do not forget to change the width of the buttons to :38.1rem  */
