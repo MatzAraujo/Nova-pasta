@@ -1,6 +1,8 @@
                                             /*======= RESETS ==========*/
 
-*{
+*,
+::before,
+::after{
     box-sizing: border-box;
     font:inherit;
     margin: 0;
@@ -62,9 +64,10 @@ html{
 }
 
 body{
-    overflow: auto hidden;
-    font-family: ;
+    overflow: hidden auto;
+    /* font-family: ; */
     color: var(--primary-clr-700);
+    text-align: center;
 }
 
 
@@ -80,7 +83,6 @@ body{
     padding-block:var(--header-padding);
     height: var(--header-height);
     width: 100vw;
-    text-align: center;
 }
 
 
@@ -108,7 +110,6 @@ main{
     display: grid;
     height: 5rem;
     margin-top: 1.6rem;
-    text-align: center;
     width: 43.1rem;
 }
 
@@ -123,4 +124,98 @@ main{
     color: var(--primary-clr-500);
 }
 
- /* in mobile screen sizes do not forget to change the width of the buttons to :38.1rem  */
+
+
+.divider{
+    margin-top: 2.2rem;
+}
+
+ .divider p{
+    position: relative;
+}
+
+.divider p::before{
+    background: var(--primary-clr-400);
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 34%;
+    top: .5rem;  
+    right: 1rem;
+}
+
+.divider p::after{
+    background: var(--primary-clr-400);
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 34%;
+    top: .5rem;  
+    left: 1rem;
+}
+
+form{
+    margin-top: 2rem;
+}
+
+legend{
+    font-weight: var(--fw-bold);
+    margin-bottom: .6rem;
+    width: 46%;
+}
+
+legend:nth-child(3){
+    width: 15%;
+}
+
+input{
+    height: 4.7rem;
+    outline: none;
+    padding: 1rem;
+    width: 40rem;
+    margin-bottom: 2rem;
+}
+
+form a{
+   color: hsl(0, 0%, 10%);
+   display: block;
+   text-decoration: underline;
+   width: 34%;
+}
+
+.checkbox-radio input[type ="checkbox"]{
+    appearance: none;
+    border: 1px solid var(--primary-clr-400);
+    border-radius: 20%;
+    cursor: pointer;
+    height: 1rem;
+    margin-top: 2rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+    width: 1rem;
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.checkbox-radio input[type ="checkbox"]:checked::before{
+    background-color: hsl(141, 75%, 35%);
+    border-radius: 20%;
+    color: var(--primary-clr-100);
+    content: '✔';
+    height:2rem;
+    width: 2rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+}
+
+.checkbox-radio input[type ="checkbox"] + label{
+    margin-right: 31rem;
+}
+
+ /* in mobile screen sizes do not forget to change the width of the buttons to :38.1rem  
+    and do not forget too, to set an font family to our body
+    set the correct font size in every text
+    add some transitions in entire page
+ */
