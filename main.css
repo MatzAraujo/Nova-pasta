@@ -1,4 +1,5 @@
                                             /*======= RESETS ==========*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;1,700&display=swap');
 
 *,
 ::before,
@@ -29,6 +30,8 @@ ul{list-style: none;}
     --primary-clr-700:hsl(0, 0%, 0%); 
 
     /* === > Fonts  <=== */
+
+    --ff-body:'Poppins', sans-serif;
     
     --fw-regular:400;
     --fw-semi-bold:500;
@@ -41,6 +44,8 @@ ul{list-style: none;}
     /* === > Layout  <=== */
 
     --header-height:9.2rem;
+
+ 
 
 }
 
@@ -65,11 +70,10 @@ html{
 
 body{
     overflow: hidden auto;
-    /* font-family: ; */
+    font-family: var(--ff-body);
     color: var(--primary-clr-700);
     text-align: center;
 }
-
 
 .container{
     display: grid;
@@ -96,6 +100,7 @@ body{
     display: inline-flex;
     align-items: center;
     font-size: 2.6rem;
+    text-transform: none;
 }
 
 main{
@@ -111,6 +116,7 @@ main{
     height: 5rem;
     margin-top: 1.6rem;
     width: 43.1rem;
+    font-size: 1.4rem;
 }
 
 .btn[data-inverted = "blue"]{
@@ -124,14 +130,13 @@ main{
     color: var(--primary-clr-500);
 }
 
-
-
 .divider{
     margin-top: 2.2rem;
 }
 
  .divider p{
     position: relative;
+    font: var(--fw-bold) 1.6rem 'Poppins';
 }
 
 .divider p::before{
@@ -161,7 +166,7 @@ form{
 legend{
     font-weight: var(--fw-bold);
     margin-bottom: .6rem;
-    width: 46%;
+    width: 54%;
 }
 
 legend:nth-child(3){
