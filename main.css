@@ -73,14 +73,11 @@ body{
     font-family: var(--ff-body);
     color: var(--primary-clr-700);
     text-align: center;
-}
-
-.container{
+    width: 100vw;
     display: grid;
     justify-items:center;
-    /* height: 100vh; */
-    width: 100vw;
 }
+
 
 .header{
     border-bottom: 1px solid var(--primary-clr-400);
@@ -103,9 +100,7 @@ body{
     text-transform: none;
 }
 
-main{
-    margin-top: 4rem;
-}
+
 
 .btn{
     align-items: center;
@@ -115,7 +110,7 @@ main{
     display: grid;
     height: 5rem;
     margin-top: 1.6rem;
-    width: 43.1rem;
+    padding: 1.6rem 4.3rem;
     font-size: 1.4rem;
 }
 
@@ -166,11 +161,11 @@ form{
 legend{
     font-weight: var(--fw-bold);
     margin-bottom: .6rem;
-    width: 54%;
+    width: 50%;
 }
 
 legend:nth-child(3){
-    width: 15%;
+    width: 10%;
 }
 
 input{
@@ -185,7 +180,18 @@ form a{
    color: hsl(0, 0%, 10%);
    display: block;
    text-decoration: underline;
-   width: 34%;
+   width: 30%;
+}
+
+.checkbox-radio{
+    display: grid;
+    gap: 6rem;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
+.checkbox-radio div{
+    width: 66%;
 }
 
 .checkbox-radio input[type ="checkbox"]{
@@ -195,7 +201,6 @@ form a{
     cursor: pointer;
     height: 1rem;
     margin-top: 2rem;
-    margin-right: .5rem;
     vertical-align: middle;
     width: 1rem;
     text-align: center;
@@ -215,12 +220,16 @@ form a{
     right: 0rem;
 }
 
-.checkbox-radio input[type ="checkbox"] + label{
-    margin-right: 31rem;
+.checkbox-radio .btn{
+    background-color: hsl(141, 75%, 35%);
+    /* height: 4rem; */
+    /* padding: 1.2rem; */
+    border: none;
+    text-decoration: none;
+    width: 15rem;
+    color: var(--primary-clr-700);
 }
 
  /* in mobile screen sizes do not forget to change the width of the buttons to :38.1rem  
-    and do not forget too, to set an font family to our body
-    set the correct font size in every text
     add some transitions in entire page
  */
